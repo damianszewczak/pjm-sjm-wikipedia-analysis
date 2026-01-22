@@ -1,54 +1,51 @@
-# Porównanie haseł Wikipedii: PJM vs SJM
+# Porównanie haseł Wikipedii: PJM i SJM
 
-Projekt zaliczeniowy polegający na ilościowej analizie treści haseł polskojęzycznej Wikipedii dotyczących **Polskiego Języka Migowego (PJM)** oraz **Systemu Językowo-Migowego (SJM)**.
+Repozytorium zawiera projekt zaliczeniowy poświęcony ilościowej analizie treści dwóch haseł polskojęzycznej Wikipedii: Polskiego Języka Migowego (PJM) oraz Systemu Językowo-Migowego (SJM). Projekt został wykonany w języku R i wykorzystuje techniki web scrapingu oraz podstawowej analizy tekstu.
 
 ---
 
 ## 🎯 Cel projektu
 
-Celem projektu jest porównanie zakresu opisu dwóch systemów komunikacji używanych w Polsce poprzez:
-
-- analizę objętości tekstu (liczba słów),
-- analizę różnorodności słownictwa (liczba słów unikalnych),
-- identyfikację najczęściej występujących pojęć.
-
-Analiza ma charakter ilościowy i eksploracyjny.
+Celem projektu jest porównanie zakresu opisu PJM i SJM w Wikipedii z wykorzystaniem prostych miar ilościowych. Analiza ma odpowiedzieć na pytanie, czy i w jakim stopniu artykuły różnią się pod względem objętości oraz zróżnicowania użytego słownictwa.
 
 ---
 
 ## 🗂 Dane
 
-Źródłem danych są dwa artykuły polskojęzycznej Wikipedii:
+Dane do analizy pochodzą z dwóch artykułów polskojęzycznej Wikipedii:
+- „Polski język migowy”
+- „System językowo-migowy”
 
-- *Polski język migowy*
-- *System językowo-migowy*
-
-Do analizy wykorzystano wyłącznie treść akapitów (`<p>`).  
-Nie uwzględniano przypisów, tabel ani elementów graficznych.
+W analizie wykorzystano wyłącznie treść zawartą w akapitach artykułów (`<p>`). Nie uwzględniano przypisów, tabel ani elementów graficznych.
 
 ---
 
 ## ⚙️ Metodologia
 
-Projekt wykonano w języku **R** z wykorzystaniem techniki web scrapingu.
+Projekt został zrealizowany w języku **R**. Dane pozyskano automatycznie z wykorzystaniem biblioteki `rvest`.
 
-Etapy analizy:
-
-1. automatyczne pobranie treści artykułów,
-2. podstawowe czyszczenie tekstu (małe litery, usunięcie znaków specjalnych),
-3. podział tekstu na słowa i filtracja bardzo krótkich form,
-4. obliczenie liczby wszystkich słów oraz liczby słów unikalnych,
-5. wizualizacja wyników na wykresach słupkowych,
-6. identyfikacja najczęściej występujących słów.
+Etapy analizy obejmowały:
+- pobranie treści artykułów,
+- podstawowe czyszczenie tekstu (zamiana na małe litery, usunięcie znaków specjalnych),
+- podział tekstu na słowa oraz usunięcie bardzo krótkich form,
+- obliczenie liczby wszystkich słów,
+- obliczenie liczby słów unikalnych (różnorodność słownictwa),
+- identyfikację najczęściej występujących słów,
+- wizualizację wyników na wykresach słupkowych.
 
 ---
 
 ## 📈 Wyniki
 
-Artykuł dotyczący PJM zawiera **865 słów**, z czego **596 to słowa unikalne**.  
-Artykuł dotyczący SJM zawiera **558 słów**, w tym **404 słowa unikalne**.
+Analiza wykazała, że artykuł dotyczący PJM zawiera:
+- 865 słów,
+- 596 słów unikalnych.
 
-Hasło poświęcone PJM jest zarówno bardziej obszerne, jak i bardziej zróżnicowane pod względem użytego słownictwa.
+Artykuł dotyczący SJM zawiera:
+- 558 słów,
+- 404 słowa unikalne.
+
+Oznacza to, że hasło poświęcone PJM jest zarówno bardziej obszerne, jak i bardziej zróżnicowane pod względem użytego słownictwa.
 
 Najczęściej występujące słowa:
 - PJM: *język, migowy, głuchych*
@@ -65,6 +62,6 @@ Najczęściej występujące słowa:
 
 ## 🤖 Wykorzystanie narzędzi AI
 
-W trakcie realizacji projektu wykorzystano **ChatGPT i Gemini** do konsultacji kodu oraz wsparcia w redakcji opisu projektu.
+W trakcie realizacji projektu wykorzystano narzędzie **ChatGPT i Gemini** w celu konsultacji kodu oraz wsparcia w redakcji opisu projektu.
 
 
