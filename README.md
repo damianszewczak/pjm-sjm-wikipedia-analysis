@@ -1,58 +1,70 @@
-Porównanie haseł Wikipedii dotyczących PJM i SJM
-Cel projektu:
-Celem projektu jest ilościowe porównanie treści dwóch haseł polskojęzycznej Wikipedii poświęconych Polskiemu Językowi Migowemu (PJM) oraz Systemowi Językowo-Migowemu (SJM). Analiza ma na celu sprawdzenie różnic w objętości tekstu oraz w stopniu zróżnicowania użytego słownictwa.
+# Porównanie haseł Wikipedii: PJM vs SJM
 
-Dane
-Dane zostały pozyskane z dwóch artykułów Wikipedii:
-„Polski język migowy”,
-„System językowo-migowy”.
+Projekt zaliczeniowy polegający na ilościowej analizie treści haseł polskojęzycznej Wikipedii dotyczących **Polskiego Języka Migowego (PJM)** oraz **Systemu Językowo-Migowego (SJM)**.
 
-Do analizy wykorzystano wyłącznie tekst zawarty w akapitach artykułów (<p>). Pominięto przypisy, tabele oraz elementy graficzne.
+---
 
-Metodologia
+## 🎯 Cel projektu
 
-Projekt wykonano w języku R z użyciem techniki web scrapingu. Treść artykułów została pobrana automatycznie, a następnie przetworzona w celu uzyskania prostych miar ilościowych.
+Celem projektu jest porównanie zakresu opisu dwóch systemów komunikacji używanych w Polsce poprzez:
 
-W analizie:
+- analizę objętości tekstu (liczba słów),
+- analizę różnorodności słownictwa (liczba słów unikalnych),
+- identyfikację najczęściej występujących pojęć.
 
-pobrano tekst akapitów z każdego artykułu,
+Analiza ma charakter ilościowy i eksploracyjny.
 
-dokonano podstawowego czyszczenia tekstu (zamiana na małe litery, usunięcie znaków specjalnych),
+---
 
-podzielono tekst na słowa i usunięto bardzo krótkie formy,
+## 🗂 Dane
 
-obliczono liczbę wszystkich słów oraz liczbę słów unikalnych,
+Źródłem danych są dwa artykuły polskojęzycznej Wikipedii:
 
-zidentyfikowano najczęściej występujące słowa w każdym artykule,
+- *Polski język migowy*
+- *System językowo-migowy*
 
-przedstawiono wyniki w formie tabeli oraz wykresów słupkowych.
+Do analizy wykorzystano wyłącznie treść akapitów (`<p>`).  
+Nie uwzględniano przypisów, tabel ani elementów graficznych.
 
-Wyniki
+---
 
-Analiza wykazała, że artykuł dotyczący PJM zawiera 865 słów, z czego 596 to słowa unikalne. Artykuł poświęcony SJM jest krótszy i obejmuje 558 słów, w tym 404 słowa unikalne.
+## ⚙️ Metodologia
 
-Oznacza to, że hasło dotyczące PJM jest nie tylko bardziej obszerne, ale również charakteryzuje się większą różnorodnością słownictwa. Różnica ta widoczna jest zarówno w całkowitej liczbie słów, jak i w liczbie użytych terminów.
+Projekt wykonano w języku **R** z wykorzystaniem techniki web scrapingu.
 
-Analiza najczęściej występujących słów pokazuje, że w obu artykułach dominują pojęcia bezpośrednio związane z językiem migowym. W artykule o PJM często pojawiają się m.in. słowa „język”, „migowy”, „głuchych”, natomiast w artykule o SJM częściej występują terminy takie jak „system”, „językowo”, „znaków”. Wyniki te odzwierciedlają różnice terminologiczne pomiędzy opisywanymi zagadnieniami.
+Etapy analizy:
 
-Ograniczenia
+1. automatyczne pobranie treści artykułów,
+2. podstawowe czyszczenie tekstu (małe litery, usunięcie znaków specjalnych),
+3. podział tekstu na słowa i filtracja bardzo krótkich form,
+4. obliczenie liczby wszystkich słów oraz liczby słów unikalnych,
+5. wizualizacja wyników na wykresach słupkowych,
+6. identyfikacja najczęściej występujących słów.
 
-Analiza ma charakter uproszczony i ogranicza się do:
+---
 
-jednego źródła danych (Wikipedia),
+## 📈 Wyniki
 
-prostych miar ilościowych (liczba słów, liczba słów unikalnych),
+Artykuł dotyczący PJM zawiera **865 słów**, z czego **596 to słowa unikalne**.  
+Artykuł dotyczący SJM zawiera **558 słów**, w tym **404 słowa unikalne**.
 
-analizy częstości słów bez interpretacji ich znaczenia w kontekście.
+Hasło poświęcone PJM jest zarówno bardziej obszerne, jak i bardziej zróżnicowane pod względem użytego słownictwa.
 
-Projekt ma charakter eksploracyjny i może stanowić punkt wyjścia do dalszych badań.
+Najczęściej występujące słowa:
+- PJM: *język, migowy, głuchych*
+- SJM: *system, językowo, znaki*
 
-Wykorzystane narzędzia
+---
 
-język R
+## 🛠 Wykorzystane narzędzia
 
-pakiety: rvest, dplyr, stringr, ggplot2
+- język **R**
+- pakiety: `rvest`, `dplyr`, `stringr`, `ggplot2`
 
-Wykorzystanie narzędzi opartych na AI
+---
 
-W trakcie realizacji projektu wykorzystano narzędzie ChatGPT do konsultacji kodu oraz wsparcia w redakcji opisu projektu.
+## 🤖 Wykorzystanie narzędzi AI
+
+W trakcie realizacji projektu wykorzystano **ChatGPT i Gemini** do konsultacji kodu oraz wsparcia w redakcji opisu projektu.
+
+
